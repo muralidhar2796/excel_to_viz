@@ -1,5 +1,7 @@
 # excel_to_viz
-Simple UI5 Application that takes simple excel file and displays it as Viz Frames
+Simple UI5 Application that takes simple excel file and displays it as Viz Frames.
+
+It uses two third party MIT licensed libraries Sheet.js to decode the XLSX file data and JSZip which is used internally by Sheet.js file.
 
 Important Things to Note:
 - The application is present in the Master branch of the repository
