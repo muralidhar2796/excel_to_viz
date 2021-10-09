@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="Value and Category Selection" class="sapUiResponsiveMargin sapUiResponsiveContentPadding">
+		<content>
+			<Table id="idVTable" items="{ path: 'ChooseModel>/modelData' }"
+				class="sapUiTinyMarginTop sapUiTinyMarginBotton sapUIContentPadding sapUiSizeCompact" mode="SingleSelectMaster"
+				headerText="Choose Dimension">
+				<columns>
+					<Column>
+						<Text text="Keys"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{ChooseModel>Value}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<Table id="idCTable" items="{ path: 'ChooseModel>/modelData' }"
+				class="sapUiTinyMarginTop sapUiTinyMarginBotton sapUIContentPadding sapUiSizeCompact" mode="SingleSelectMaster" headerText="Choose Measure">
+				<columns>
+					<Column>
+						<Text text="Keys"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{ChooseModel>Value}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<buttons>
+			<Button text="Choose" class="sapUiSmallMarginEnd" press="onChoose"/>
+			<Button text="Close" press="onClose"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

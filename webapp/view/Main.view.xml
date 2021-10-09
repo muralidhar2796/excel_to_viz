@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="exceltoviz.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" 
+    xmlns:l="sap.ui.layout"
+>
+	<Shell id="shell" appWidthLimited="false">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<customHeader>
+					<Bar>
+						<contentMiddle>
+							<Title text="Excel To Viz Chart" textAlign="Center" level="H1"/>
+						</contentMiddle>
+						<contentRight>
+							<Button id="uploadExcel" text="Upload Excel" type="Emphasized" class="sapUiSizeCompact" press="onUpload"/>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<l:BlockLayout background="Dashboard">
+						<l:BlockLayoutRow>
+							<l:BlockLayoutCell class="sapUiNoContentPadding">
+								<VBox fitContainer="true" height="18rem" renderType="Bare">
+									<viz:VizFrame id="idBarChart" vizType='bar'/>
+								</VBox>
+							</l:BlockLayoutCell>
+							<l:BlockLayoutCell class="sapUiNoContentPadding">
+								<VBox fitContainer="true" height="18rem" renderType="Bare">
+									<viz:VizFrame id="idPieChart" vizType='pie'/>
+								</VBox>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow>
+							<l:BlockLayoutCell class="sapUiNoContentPadding">
+								<VBox fitContainer="true" height="18rem" renderType="Bare">
+									<viz:VizFrame id="idColumnChart" vizType='column'/>
+								</VBox>
+							</l:BlockLayoutCell>
+							<l:BlockLayoutCell class="sapUiNoContentPadding">
+								<VBox fitContainer="true" height="18rem" renderType="Bare">
+									<viz:VizFrame id="idDonutChart" vizType='donut'/>
+								</VBox>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+					</l:BlockLayout>
+				</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,17 @@
+<core:FragmentDefinition class="sapUiSizeCompact sapUiContentPadding" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog id="uploader" title="Upload Excel">
+		<content>
+			<VBox>
+				<u:FileUploader id="fileUploader" name="myFileUpload" class="sapUiSmallMarginBegin sapUiSmallMarginTop" fileType="xlsx"
+					typeMissmatch="handleTypeMissmatch" style="Emphasized"/>
+			</VBox>
+			<VBox>
+				<Text class="grayText sapUiSmallMarginBegin sapUiSmallMarginBottom" text="*Select only one file to upload"></Text>
+			</VBox>
+		</content>
+		<buttons>
+			<Button text="Upload" type="Transparent" press="handleUploadPress"/>
+			<Button text="Cancel" type="Transparent" press="onUploadCancel"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
